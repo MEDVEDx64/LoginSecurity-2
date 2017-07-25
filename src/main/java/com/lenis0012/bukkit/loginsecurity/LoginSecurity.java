@@ -8,6 +8,7 @@ import com.lenis0012.bukkit.loginsecurity.modules.language.LanguageKeys;
 import com.lenis0012.bukkit.loginsecurity.modules.language.LanguageModule;
 import com.lenis0012.bukkit.loginsecurity.modules.language.TranslatedMessage;
 import com.lenis0012.bukkit.loginsecurity.modules.migration.MigrationModule;
+import com.lenis0012.bukkit.loginsecurity.modules.queryserver.QueryServerModule;
 import com.lenis0012.bukkit.loginsecurity.modules.storage.StorageModule;
 import com.lenis0012.bukkit.loginsecurity.modules.threading.ThreadingModule;
 import com.lenis0012.bukkit.loginsecurity.session.SessionManager;
@@ -105,7 +106,8 @@ public class LoginSecurity extends PluginHolder {
                 MigrationModule.class,
                 GeneralModule.class,
                 ThreadingModule.class,
-                CaptchaManager.class);
+                CaptchaManager.class,
+                QueryServerModule.class);
     }
 
     @Override
