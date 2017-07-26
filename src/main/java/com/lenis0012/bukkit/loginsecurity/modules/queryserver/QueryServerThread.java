@@ -1,6 +1,7 @@
 package com.lenis0012.bukkit.loginsecurity.modules.queryserver;
 
 import java.io.IOException;
+import java.net.InetAddress;
 import java.net.ServerSocket;
 
 public class QueryServerThread extends Thread {
@@ -12,7 +13,7 @@ public class QueryServerThread extends Thread {
     @Override public void run() {
         while(running) {
             try {
-                serverSocket = new ServerSocket(PORT);
+                serverSocket = new ServerSocket(PORT, 0, InetAddress.getLoopbackAddress());
                 while(running) {
                     try {
                         new ClientInstance(serverSocket.accept()).start();
